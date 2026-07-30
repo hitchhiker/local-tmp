@@ -1,0 +1,14 @@
+name: Easy Flow Ingress Probe
+
+on:
+  workflow_dispatch:
+
+jobs:
+  ingress-probe:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Produce an intentional notification
+        shell: bash
+        run: |
+          echo "Intentional failure for the Easy Flowdown natural-ingress test."
+          exit 1
